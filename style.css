@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Montserrat:wght@400;700&display=swap");
+
+:root {
+    --tint: 0, 255, 132;
+    --tint-color: rgb(0, 255, 132);
+    --tint-color-hover: rgb(4, 218, 115);
+    --light: 255, 255, 255;
+    --light-color: rgb(255, 255, 255);
+    --dark: 13, 14, 14;
+    --dark-color: rgb(13, 14, 14);
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+    padding: 4em 3em 2em;
+}
+
+#strive-logo {
+    width: 180px;
+}
+
+#main-header {
+    --light-color: rgb(var(--light));
+    min-height: 100vh;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/smile.jpg); */
+    background-image: url(/assets/smile.jpg);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 130%;
+    color: var(--light-color);
+}
+
+#main-header::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(var(--dark), 0.3);
+    position: absolute;
+}
+
+#main-header .container h1 {
+    font-family: "EB Garamond", serif;
+    font-size: 3.5em;
+}
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+#main-header .container > div {
+    width: 60%;
+}
+
+#main-header .container h1 strong,
+#main-header .container p strong {
+    display: block;
+}
+
+#main-header > .container p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5em;
+}
+
+.btn-strive {
+    color: var(--dark-color);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    padding: 0.6em 2em;
+    background-color: var(--tint-color);
+    border-color: var(--tint-color);
+}
+
+.btn-strive:hover {
+    color: var(--dark-color);
+    background-color: var(--tint-color-hover);
+    border-color: var(--tint-color-hover);
+}
+
+#main-header .img-wrapper {
+    min-height: 40px;
+}
+#main-header .img-wrapper + p {
+    color: rgb(var(--light), 0.6);
+}
+
+#main-header .container-fluid {
+    background-color: rgba(var(--dark), 0.8);
+    flex-grow: 1;
+    font-family: "Montserrat", sans-serif;
+    align-items: center;
+    margin-top: 5em;
+}
+
+#main-header .container-fluid h3 {
+    padding: 2em 0em;
+    font-weight: 700;
+}
+
+h3::before {
+    content: "/";
+    color: var(--tint-color);
+    padding-right: 10px;
+}
+#upcoming {
+    background-image: url(/assets/backgr02.2.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 50% 100%;
+}
+
+#upcoming .row {
+    min-height: 50vh;
+    padding: 200px 0px;
+}
+
+.date {
+    width: 110px;
+    height: 110px;
+    padding: 1em;
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.57);
+    border-radius: 16px;
+}
+
+.date span {
+    display: block;
+}
+
+.date > span:nth-of-type(2) {
+    font-size: 4em;
+    font-weight: 700;
+    position: relative;
+    top: -0.35em;
+}
+
+.date.dark {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.date.light {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+.content a {
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark-color);
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 1005px) {
+    #main-header {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 767px) {
+    #main-header {
+        background-position: 50% 50%;
+    }
+
+    #main-header .container > div {
+        padding: 4em 0px;
+        width: unset;
+    }
+
+    #main-header .container h1 {
+        font-size: 2.5em;
+    }
+    #main-header .container p {
+        font-size: 1em;
+    }
+    .btn-strive {
+        font-size: 1em;
+    }
+}
